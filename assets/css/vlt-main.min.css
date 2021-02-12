@@ -1,5 +1,5 @@
 :root {
-  --p1: #0b80e0;
+  --p1: #ff8383;
   --pf: Inter;
 }
 @-webkit-keyframes vlt_animate_icon_bottom {
@@ -118,7 +118,13 @@
   background-color: var(--p1);
 }
 .has-white-color {
-  color: #fff !important;
+  color: #333 !important;
+}
+.has-grey-color {
+  color: #999 !important;
+}
+.has-red-color {
+  color: #ff8080 !important;
 }
 .has-white-background-color {
   background-color: #fff;
@@ -375,7 +381,7 @@ a {
   -webkit-transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   text-decoration: none;
-  color: inherit;
+  color: #333;
 }
 a:active,
 a:focus,
@@ -472,11 +478,11 @@ textarea {
   border: none;
   border-radius: 4px;
   outline: 0;
-  background-color: #222;
-  -webkit-box-shadow: 0 5px 15px 5px rgba(16, 16, 16, 0.1),
+  background-color: #fff;
+  /* -webkit-box-shadow: 0 5px 15px 5px rgba(16, 16, 16, 0.1),
     inset 0 -2px 0 0 rgba(16, 16, 16, 0.2);
   box-shadow: 0 5px 15px 5px rgba(16, 16, 16, 0.1),
-    inset 0 -2px 0 0 rgba(16, 16, 16, 0.2);
+    inset 0 -2px 0 0 rgba(16, 16, 16, 0.2); */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -797,7 +803,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 .vlt-navbar-contacts ul li a:hover {
   opacity: 0.8;
-  color: inherit;
+  color: #222;
 }
 @media (min-width: 783px) {
   .admin-bar .vlt-navbar--fixed {
@@ -1242,7 +1248,7 @@ textarea:focus::-webkit-input-placeholder {
   background-color: rgba(16, 16, 16, 0.1);
 }
 .is-light .vlt-fullpage-slider-progress-bar li {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(16, 16, 16, 0.1);
 }
 .vlt-fullpage-slider-progress-bar li::before {
   position: absolute;
@@ -1288,7 +1294,7 @@ textarea:focus::-webkit-input-placeholder {
   letter-spacing: -0.01em;
   color: #fff;
   border-top-left-radius: 8px;
-  background-color: #101010;
+  background-color: #ff8383;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1382,6 +1388,11 @@ textarea:focus::-webkit-input-placeholder {
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   color: #101010;
+}
+.vlt-fixed-socials a {
+  -webkit-transform: rotate(90deg) translate3d(50%, 0, 0);
+  transform: rotate(90deg) translate3d(50%, 0, 0);
+  padding: 15px;
 }
 @media only screen and (max-width: 991px) {
   .vlt-fixed-socials {
