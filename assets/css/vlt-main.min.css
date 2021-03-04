@@ -771,7 +771,7 @@ textarea:focus::-webkit-input-placeholder {
 .vlt-navbar .vlt-navbar-logo img {
   display: block;
   max-width: none;
-  max-height: 24px;
+  max-height: 80px;
 }
 .is-light .vlt-navbar .vlt-navbar-logo img.black {
   display: none;
@@ -784,7 +784,7 @@ textarea:focus::-webkit-input-placeholder {
   color: currentColor;
 }
 .vlt-navbar-contacts {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .vlt-navbar-contacts ul {
   display: -webkit-inline-box;
@@ -805,6 +805,11 @@ textarea:focus::-webkit-input-placeholder {
   opacity: 0.8;
   color: #222;
 }
+@media (max-width: 810px) {
+  .vlt-navbar .vlt-navbar-logo img {
+    max-height: 50px;
+  }
+}
 @media (min-width: 783px) {
   .admin-bar .vlt-navbar--fixed {
     top: 32px !important;
@@ -818,6 +823,9 @@ textarea:focus::-webkit-input-placeholder {
 @media (max-width: 600px) {
   .admin-bar .vlt-navbar--fixed {
     top: 0 !important;
+  }
+  .vlt-navbar .vlt-navbar-logo img {
+    max-height: 50px;
   }
 }
 .vlt-menu-burger {
