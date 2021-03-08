@@ -45,18 +45,20 @@
 					submitHandler: function (form) {
 						$.ajax({
 							type: 'POST',
-							url: 'handler.php',
+							url: 'https://15.207.110.240:81/himanshu_mail_files/handler.php',
 							data: new FormData(form),
 							cache: false,
 							contentType: false,
 							processData: false,
 							success: function () {
+
 								successMessage.fadeIn();
 								setTimeout(function () {
 									successMessage.fadeOut();
 								}, 5000);
 							},
-							error: function () {
+							error: function (error) {
+								console.log("error", error);
 								errorMessage.fadeIn();
 								setTimeout(function () {
 									errorMessage.fadeOut();
@@ -407,10 +409,10 @@
 			menuIsOpen = true;
 			if (typeof gsap != 'undefined') {
 				gsap.timeline({
-						defaults: {
-							ease: this.config.easing
-						}
-					})
+					defaults: {
+						ease: this.config.easing
+					}
+				})
 					// set overflow for html
 					.set(VLTJS.html, {
 						overflow: 'hidden'
@@ -464,10 +466,10 @@
 			menuIsOpen = false;
 			if (typeof gsap != 'undefined') {
 				gsap.timeline({
-						defaults: {
-							ease: this.config.easing
-						}
-					})
+					defaults: {
+						ease: this.config.easing
+					}
+				})
 					// set overflow for html
 					.set(VLTJS.html, {
 						overflow: 'inherit'
@@ -657,7 +659,7 @@
 			item.eq(0).trigger('mouseenter');
 
 			VLTJS.window.on('mousemove', function (e) {
-				value = e.pageX - el.offset().left;
+				// value = e.pageX - el.offset().left;
 			});
 
 			gsap.ticker.add(function () {
