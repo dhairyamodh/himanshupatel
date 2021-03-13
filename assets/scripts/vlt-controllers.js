@@ -45,11 +45,8 @@
 					submitHandler: function (form) {
 						$.ajax({
 							type: 'POST',
-							url: 'https://15.207.110.240:81/himanshu_mail_files/handler.php',
-							data: new FormData(form),
-							cache: false,
-							contentType: false,
-							processData: false,
+							url: 'http://15.207.110.240:4000/sendemail',
+							data: thisForm.serialize(),
 							success: function () {
 
 								successMessage.fadeIn();
