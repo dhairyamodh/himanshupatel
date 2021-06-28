@@ -239,7 +239,7 @@
 			});
 
 			function vlthemes_navbar_solid() {
-				if (el.find('.pp-section.active').scrollTop() > 0) {
+				if (el.find('.pp-section.active').scrollTop() > 50) {
 					$('.vlt-navbar').addClass('vlt-navbar--solid');
 				} else {
 					$('.vlt-navbar').removeClass('vlt-navbar--solid');
